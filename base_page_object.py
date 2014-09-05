@@ -24,3 +24,10 @@ class BasePage(object):
     def click_button_by_name(self, name):
         elem = self.driver.find_element_by_name(name)
         elem.click()
+
+    def click_link_by_name(self, name):
+        elem = self.driver.find_element_by_link_text(name)
+        elem.click()
+
+    def get_errors_by_class(self, class_name ):
+        return self.driver.find_elements_by_class_name(class_name)

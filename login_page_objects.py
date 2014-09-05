@@ -14,3 +14,9 @@ class LoginPage(BasePage):
 
     def submit(self):
         self.click_button_by_name('commit')
+
+    #Actions
+    def submit_form_with(self, username, password):
+        self.set_username_to(username)
+        self.set_password_to(password)
+        self.submit()
